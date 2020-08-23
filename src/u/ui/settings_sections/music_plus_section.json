@@ -1,0 +1,1815 @@
+//本Json文件由孙悟空编写，未经允许禁止二次修改！！！
+{
+  "namespace": "music_plus_section",
+  "music_plus_button@settings_common.section_toggle_base": { 
+    "$toggle_view_binding_name": "music_plus_button_toggle",
+    "$glyph_texture": "textures/ui/music_plus_pack_icon_outline",
+    "$glyph_color_texture": "textures/ui/music_plus_pack_icon_color",
+    "$glyph_size": [ 17, 17 ],
+    "$button_text": "tab.music_plus.name",
+    "$toggle_property_bag": {
+      "#panel_title": "tab.music_plus.title" 
+    }
+  },
+  "music_plus_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "music_plus_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [ 0, 5 ]
+        }
+      },
+      {
+        "music_plus_information@music_plus_section.music_plus_information": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "music_plus_command_help@music_plus_section.music_plus_command_help": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "music_plus_changelog@music_plus_section.music_plus_changelog": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "music_plus_credits@music_plus_section.music_plus_credits": {}
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [ 0, 5 ]
+        }
+      }
+    ]
+  },
+  "music_plus_information": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "pack_information@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.information"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "store_required@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.information.store"
+        }
+      }
+    ]
+  },
+  "music_plus_changelog": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "$universal_section_ignored": false,
+    "$default_section_ignored": true,
+    "$native_music_section_ignored": true,
+    "$festive_music_section_ignored": true,
+    "$no_water_music_section_ignored": true,
+    "$old_music_section_ignored": true,
+    "$old_music_plus_section_ignored": true,
+    "$custom_music_section_ignored": false,
+    "$total_mix_section_ignored": false,
+    "$no_automatic_music_section_ignored": true,
+    "$fixes_section_ignored": false,
+    "$pack_section_ignored": false,
+    "$notes_section_ignored": true,
+    "controls": [
+      {
+        "changelog_header@how_to_play_common.header": {
+          "$text": "tab.music_plus.changelog.section"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "changelog_title_section@music_plus_section.changelog_title_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$universal_section_ignored"
+        }
+      },
+      {
+        "changelog_universal_section@music_plus_section.changelog_universal_section": {
+          "ignored": "$universal_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$default_section_ignored"
+        }
+      },
+      {
+        "changelog_default_section@music_plus_section.changelog_default_section": {
+          "ignored": "$default_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$native_music_section_ignored"
+        }
+      },
+      {
+        "changelog_native_music_section@music_plus_section.changelog_native_music_section": {
+          "ignored": "$native_music_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$festive_music_section_ignored"
+        }
+      },
+      {
+        "changelog_festive_music_section@music_plus_section.changelog_festive_music_section": {
+          "ignored": "$festive_music_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$no_water_music_section_ignored"
+        }
+      },
+      {
+        "changelog_no_water_music_section@music_plus_section.changelog_no_water_music_section": {
+          "ignored": "$no_water_music_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$old_music_section_ignored"
+        }
+      },
+      {
+        "changelog_old_music_section@music_plus_section.changelog_old_music_section": {
+          "ignored": "$old_music_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$old_music_plus_section_ignored"
+        }
+      },
+      {
+        "changelog_old_music_plus_section@music_plus_section.changelog_old_music_plus_section": {
+          "ignored": "$old_music_plus_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$total_mix_section_ignored"
+        }
+      },
+      {
+        "changelog_total_mix_section@music_plus_section.changelog_total_mix_section": {
+          "ignored": "$total_mix_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$no_automatic_music_section_ignored"
+        }
+      },
+      {
+        "changelog_no_automatic_music_section@music_plus_section.changelog_no_automatic_music_section": {
+          "ignored": "$no_automatic_music_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$fixes_section_ignored"
+        }
+      },
+      {
+        "changelog_fixes_section@music_plus_section.changelog_fixes_section": {
+          "ignored": "$fixes_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$pack_section_ignored"
+        }
+      },
+      {
+        "changelog_pack_section@music_plus_section.changelog_pack_section": {
+          "ignored": "$pack_section_ignored"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$notes_section_ignored"
+        }
+      },
+      {
+        "changelog_notes_section@music_plus_section.changelog_notes_section": {
+          "ignored": "$notes_section_ignored"
+        }
+      }
+    ]
+  },
+  "music_plus_credits": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "credits_title@how_to_play_common.header": {
+          "$text": "tab.music_plus.credits.section"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "credits_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.credits.1"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "credits_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.credits.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "credits_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.credits.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "credits_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.credits.4"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "credits_5@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.credits.5"
+        }
+      }
+    ]
+  },
+  "music_plus_command_help": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "command_help_title@how_to_play_common.header": {
+          "$text": "tab.music_plus.command_help.section"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "command_help_information@music_plus_section.command_help_information_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "volume_alpha_section@music_plus_section.command_help_volume_alpha_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "volume_beta_section@music_plus_section.command_help_volume_beta_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "update_aquatic_section@music_plus_section.command_help_update_aquatic_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "nether_update_section@music_plus_section.command_help_nether_update_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "festive_remixes_section@music_plus_section.command_help_festive_remixes_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "other_section@music_plus_section.command_help_other_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "albums_section@music_plus_section.command_help_albums_section": {}
+      },
+      { "padding@how_to_play_common.padding": {
+        }
+      },
+      {
+        "custom_section@music_plus_section.command_help_custom_section": {}
+      }
+    ]
+  },
+  "changelog_title_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "$rules_line_ignored": true,
+    "controls": [
+      {
+        "changelog_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.title"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "changelog_date@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.date"
+        }
+      },
+      { "padding@how_to_play_common.padding": {
+          "ignored": "$rules_line_ignored"
+        }
+      },
+      {
+        "changelog_rules@how_to_play_common.paragraph": {
+          "ignored": "$rules_line_ignored",
+          "$text": "tab.music_plus.changelog.rules"
+        }
+      }
+    ]
+  },
+  "changelog_universal_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "universal_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.universal"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.4"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_5@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.5"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_6@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.6"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_7@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.7"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_8@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.8"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_9@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.9"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_10@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.10"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_11@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.11"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_12@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.12"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_13@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.13"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_14@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.14"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_15@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.15"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_16@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.16"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_17@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.17"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_18@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.18"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_19@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.19"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_20@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.20"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "universal_21@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.universal.21"
+        }
+      }
+    ]
+  },
+  "changelog_default_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "default_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.default"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "default_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.default.1"
+        }
+      }
+    ]
+  },
+  "changelog_native_music_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "native_music_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.native_music"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "native_music_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.native_music.1"
+        }
+      }
+    ]
+  },
+  "changelog_festive_music_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "festive_music_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.festive_music"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      }
+    ]
+  },
+  "changelog_no_water_music_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "no_water_music_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.no_water_music"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "no_water_music_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.no_water_music.1"
+        }
+      }
+    ]
+  },
+  "changelog_old_music_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "old_music_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.old_music"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      }
+    ]
+  },
+  "changelog_old_music_plus_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "old_music_plus_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.old_music_plus"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      }
+    ]
+  },
+  "changelog_custom_music_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "custom_music_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.custom_music"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_music_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.custom_music.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_music_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.custom_music.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_music_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.custom_music.3"
+        }
+      }
+    ]
+  },
+  "changelog_total_mix_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "total_mix_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.total_mix"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "total_mix_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.total_mix.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "total_mix_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.total_mix.2"
+        }
+      }
+    ]
+  },
+  "changelog_no_automatic_music_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "no_automatic_music_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.no_automatic_music"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      } 
+    ]
+  },
+  "changelog_fixes_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "fixes_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.fixes"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "fixes_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.fixes.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "fixes_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.fixes.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "fixes_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.fixes.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "fixes_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.fixes.4"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "fixes_5@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.fixes.5"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "fixes_6@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.fixes.6"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "fixes_7@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.fixes.7"
+        }
+      }
+    ]
+  },
+  "changelog_pack_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "pack_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.pack"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.4"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_5@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.5"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_6@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.6"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_7@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.7"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_8@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.8"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_9@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.9"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_10@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.10"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_11@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.11"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "pack_12@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.pack.12"
+        }
+      }
+    ]
+  },
+  "changelog_notes_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "notes_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.section.notes"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "notes_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.notes.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "notes_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.changelog.notes.2"
+        }
+      }
+    ]
+  },
+  "command_help_information_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "information@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.information"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "example@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.information.example"
+        }
+      }
+    ]
+  },
+  "command_help_volume_alpha_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "volume_alpha_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.section.volume_alpha"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.4"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_5@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.5"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_6@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.6"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_7@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.7"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_8@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.8"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_9@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.9"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_10@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.10"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_11@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.11"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_12@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.12"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_13@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.13"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_14@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.14"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_15@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.15"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_16@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.16"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_17@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.17"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_18@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.18"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_19@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.19"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_20@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.20"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_21@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.21"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_22@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.22"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_23@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.23"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha_24@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_alpha.24"
+        }
+      }
+    ]
+  },
+  "command_help_volume_beta_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "volume_beta_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.section.volume_beta"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.4"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_5@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.5"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_6@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.6"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_7@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.7"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_8@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.8"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_9@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.9"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_10@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.10"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_11@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.11"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_12@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.12"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_13@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.13"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_14@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.14"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_15@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.15"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_16@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.16"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_17@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.17"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_18@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.18"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_19@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.19"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_20@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.20"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_21@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.21"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_22@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.22"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_23@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.23"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_24@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.24"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_25@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.25"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_26@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.26"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_27@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.27"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_28@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.28"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_29@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.29"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_beta_30@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.volume_beta.30"
+        }
+      }
+    ]
+  },
+  "command_help_update_aquatic_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "update_aquatic_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.section.update_aquatic"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "update_aquatic_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.update_aquatic.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "update_aquatic_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.update_aquatic.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "update_aquatic_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.update_aquatic.3"
+        }
+      }
+    ]
+  },
+  "command_help_nether_update_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "nether_update_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.section.nether_update"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "nether_update_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.nether_update.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "nether_update_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.nether_update.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "nether_update_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.nether_update.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "nether_update_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.nether_update.4"
+        }
+      }
+    ]
+  },
+  "command_help_festive_remixes_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "festive_remixes_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.section.festive_remixes"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "festive_remixes_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.festive_remixes.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "festive_remixes_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.festive_remixes.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "festive_remixes_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.festive_remixes.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      }
+    ]
+  },
+  "command_help_other_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "other_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.section.other"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "other_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.other.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "other_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.other.2"
+        }
+      }
+    ]
+  },
+  "command_help_albums_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "albums_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.section.albums"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "albums_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.albums.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "albums_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.albums.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "albums_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.albums.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "albums_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.albums.4"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "albums_5@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.albums.5"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "albums_6@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.albums.6"
+        }
+      }
+    ]
+  },
+  "command_help_custom_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "custom_title@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.section.custom"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_1@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.1"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_2@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.2"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_3@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.3"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_4@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.4"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_5@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.5"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_6@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.6"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_7@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.7"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_8@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.8"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_9@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.9"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_10@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.10"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_11@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.11"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_12@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.12"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_13@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.13"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_14@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.14"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_15@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.15"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_16@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.16"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_17@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.17"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_18@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.18"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_19@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.19"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_20@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.20"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_21@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.21"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_22@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.22"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_23@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.23"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_24@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.24"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_25@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.25"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_26@how_to_play_common.paragraph": {
+          "$text": "tab.music_plus.command_help.custom.26"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+﻿##  Video Settings
+options.graphics.fancy.tooltip=高貴  - 高畫質，較慢  改變雲，樹葉，水，陰影與草地側面的外觀。
+options.graphics.fast.tooltip=性能優先  - 低畫質，較流暢  改變雲，樹葉，水，陰影與草地側面的外觀。
+
+options.vsync=使用垂直同步 
+options.vsync.off=關閉 
+options.vsync.on=開啟 
+options.vsync.adaptive=自適應同步 
+
+options.renderClouds=雲 
+
+options.maxFramerate=最大 FPS 
+
+options.fov.toggle=動態視場
+
+options.thirdperson=視角 
+options.thirdperson.firstperson=第一人稱 
+options.thirdperson.thirdpersonback=第三人稱背面 
+options.thirdperson.thirdpersonfront=第三人稱正面 
+
+##  Recipe Book
+gui.recipebook.search_hint=§o搜尋...
+gui.recipebook.toggleRecipes.all=已列出所有項目
+gui.recipebook.toggleRecipes.craftable=已列出可合成項目
+gui.recipebook.toggleRecipes.smeltable=已列出可熔煉項目
+gui.recipebook.toggleRecipes.blastable=已列出高爐可熔煉項目
+gui.recipebook.toggleRecipes.smokable=已列出可燻製項目
+
+## Creative
+inventory.binSlot=銷毀物品
+
+##  Resource Packs
+resourcePack.available.title=§l可用的資源包
+resourcePack.available.title.behaviorPacks=§l可用的行為包
+resourcePack.selected.title=§l已選擇的資源包
+resourcePack.selected.title.behaviorPacks=§l已選擇的行為包
+
+##  Worlds
+merchant.deprecated=村民每天最多補貨兩次。#
+selectWorld.tooltip.beta=使用測試版本載入之前，別忘了先備份這個世界。
+
+##  Realms
+realms.what_is.desc=領域是一種安全，簡單的方式，一次最多可與10個朋友一起享受Minecraft的在線世界。它支持迷你游戲和大量自定義世界！只有領域的所有者需要付款。#
+
+##  Toggle OFF/ON
+options.off=關閉
+options.on=開啟
+
+## Profile Screen
+profile.user= 使用者
+profile.connected= 已連接
+
+## Gamerule
+selectWorld.gameRules=遊戲規則
+  
+editGamerule.title=編輯遊戲規則
+editGamerule.default=預設值:
+
+gamerule.announceAdvancements=進度通知
+gamerule.commandBlockOutput=公布指令方塊輸出
+gamerule.disableElytraMovementCheck=停用鞘翅移動檢測
+gamerule.disableRaids=停用突襲
+gamerule.doDaylightCycle=推進遊戲內的時間
+gamerule.doEntityDrops=掉落實體裝備
+gamerule.doEntityDrops.description=控制自礦車（包括物品欄）、物品展示框、船等的掉落物
+gamerule.doFireTick=更新火焰
+gamerule.doImmediateRespawn=立即重生
+gamerule.doInsomnia=生成夜魅
+gamerule.doLimitedCrafting=需要配方才能合成
+gamerule.doLimitedCrafting.description=若啟用， 玩家將只能合成已解鎖的配方
+gamerule.doMobLoot=掉落生物戰利品
+gamerule.doMobLoot.description=控制資源掉落， 包含經驗球
+gamerule.doMobSpawning=生成生物
+gamerule.doMobSpawning.description=部分實體可能採用不同的規則
+gamerule.doPatrolSpawning=生成掠奪者巡邏隊
+gamerule.doTileDrops=掉落方塊
+gamerule.doTileDrops.description=控制資源掉落， 包含經驗球
+gamerule.doTraderSpawning=生成流浪商人
+gamerule.doWeatherCycle=更新天氣
+gamerule.drowningDamage=造成溺水傷害
+gamerule.fallDamage=造成摔落傷害
+gamerule.fireDamage=造成火焰傷害
+gamerule.keepInventory=死亡後保留物品欄
+gamerule.logAdminCommands=公布管理員指令
+gamerule.maxCommandChainLength=指令連鎖大小限制
+gamerule.maxCommandChainLength.description=套用於連鎖型指令方塊及函數
+gamerule.maxEntityCramming=實體擠壓上限
+gamerule.mobGriefing=允許生物的破壞行為
+gamerule.naturalRegeneration=自然回血
+gamerule.randomTickSpeed=隨機刻速率
+gamerule.reducedDebugInfo=簡化除錯資訊
+gamerule.reducedDebugInfo.description=限制除錯畫面的內容
+gamerule.sendCommandFeedback=回傳指令回饋
+gamerule.showDeathMessages=顯示死亡訊息
+gamerule.spawnRadius=重生點半徑
+gamerule.spectatorsGenerateChunks=允許旁觀者生成地形
+
+gamerule.category.chat=§l聊天欄
+gamerule.category.spawning=§l生成
+gamerule.category.updates=§l世界更新
+gamerule.category.drops=§l掉落
+gamerule.category.mobs=§l生物
+gamerule.category.player=§l玩家
+gamerule.category.misc=§l雜項
+
+##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Mobs remaining:	#
+
+##  Raid Texts Output
+bar.event.raid.name=戰鬥	#
+bar.event.raid.remaining.2=戰鬥 - 剩餘生物： 2	#
+bar.event.raid.remaining.1=戰鬥 - 剩餘生物： 1	#
+bar.event.raid.remaining.0=戰鬥 - 剩餘生物： 0	#

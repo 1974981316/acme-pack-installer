@@ -1,0 +1,106 @@
+{
+  //////// 扩展 ////////
+
+  //(c) By 孙悟空。未经允许禁止二次修改！！！
+
+  //////// HUD界面 ////////
+  "$experience_outline_text_color": [ 0.0, 0.0, 0.0 ],
+
+  //////// 主菜单按钮 ////////
+  "$main_menu_button_default_color": [ 0.87, 0.87, 0.87 ],
+  "$main_menu_button_hover_color": [ 0.87, 0.87, 0.87 ], //Before [ 1.0, 1.0, 0.62 ]
+  "$main_menu_button_preesed_color": [ 0.87, 0.87, 0.87 ], //Before [ 1.0, 1.0, 0.62 ]
+  "$main_menu_button_locked_color": [ 0.62, 0.62, 0.62 ],
+
+  //////// 铁帖 ////////
+  //For java text colors.
+  "$anvil_cost_fail_text_color": [ 1.0, 0.375, 0.375 ],
+
+  //////// 附魔台 ////////
+  //For java text colors, default, hover and locked.
+  "$enchanting_runes_default_color": [ 0.4, 0.36, 0.3 ],
+  "$enchanting_runes_hover_color": [ 1.0, 1.0, 0.5 ],
+  "$enchanting_runes_locked_color": [ 0.2, 0.18, 0.14 ],
+
+  "$enchanting_cost_locked_color": [ 0.25, 0.5, 0.06 ],
+
+  //////// 告示牌 ////////
+  "$sign_edit_text_color": [ 1, 1, 1 ],
+
+  //////// 更多 Java UI ////////
+  "$chat_size": [ "40%", 180 ],
+  "$ignore_scoreboard_scores": false,
+  "$scoreboard_text_shadow": false,
+  /*
+  Recommended if you use "Screen Animations" enabled in settings.
+  But it is not recommended when the texture of the chat message
+  you are going to use is transparent.
+  */
+  "$show_hud_while_inventory": true,
+
+  //////// 计分牌颜色 ////////
+  "$player_score_color": [ 1.0, 0.333, 0.333, 1.0 ],
+  
+  //////// Java Gui 分辨率 ////////
+  //看不懂就别动了
+  //Modify Java UI Resolutions for your texture!
+
+  //For menu BG.
+  //支持 16x, 32x, 64x, 128x, 256x and 512x.
+
+  //options_background
+  "$options_background_resolution": "64x",
+  //credits_background
+  "$credits_background_resolution": "64x",
+  //blocks_background
+  "$block_background_resolution": "64x",
+
+  //For Creative inventory UI.
+  //Scroll Viewport BG.
+  "$creative_scroll_viewport_bg": true,
+  "$creative_scroll_viewport_bg_color": [ 0.5, 0.5, 0.5 ],
+
+  //For inventory containers.
+  //支持: 256x, 512x, 1024x, 2048x, 4096x and 8192x.
+
+  //advancements
+  "$advancements_window_resolution": "512x",
+  "$advancements_widgets_resolution": "512x",
+  "$advancements_tabs_resolution": "512x",
+
+  //For advancements tile BG: Valid values is: 16x, 32x, 64x, 128x, 256x and 512x.
+  "$adventure_background_resolution": "64x",
+  "$end_background_resolution": "64x",
+  "$husbandry_background_resolution": "64x",
+  "$nether_background_resolution": "64x",
+  "$stone_background_resolution": "64x", //Only used for now!!!
+  //bars
+  "$bars_resolution": "512x",
+  //blast_furnace
+  "$blast_furnace_resolution": "512x",
+  //brewing_stand
+  "$brewing_stand_resolution": "512x",
+  //creative_inventory
+  "$creative_tab_items_resolution": "512x",
+  "$creative_tab_search_resolution": "512x",
+  "$creative_tab_inv_resolution": "512x",
+  "$creative_tabs_resolution": "512x",
+  //furnace
+  "$furnace_resolution": "512x",
+  //icons
+  "$icons_resolution": "512x",
+  //loom
+  "$loom_resolution": "512x",
+  //recipe_book
+  "$recipe_book_resolution": "512x",
+  //smoker
+  "$smoker_resolution": "512x",
+  //title_minecraft
+  "$title_minecraft_resolution": "512x",
+  //villager2
+  "$villager2_resolution": "512x",
+  //widgets
+  "$widgets_resolution": "512x",
+  //uidx_all_buttons
+  "$uidx_buttons_resolution": "512x"
+}

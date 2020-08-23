@@ -1,0 +1,34 @@
+//本材质包由孙悟空制作，未经允许，严禁转载！！！
+//本材质包二次修改后，严禁外传！！！除非经过作者允许！！！
+{
+   "format_version" : 2,
+   "header" : {
+      "description" : "本材质包由孙悟空制作，未经允许，严禁转载！！！",
+      "name" : "ACME Pack 2020 R1",
+      "uuid" : "24dd11f9-1a18-4d23-a985-5300cae3a51c",
+      "version" : [ 1, 0, 0 ],
+      "min_engine_version" : [ 1, 16, 0 ]
+   },
+   "modules" : [
+      {
+         "description" : "",
+         "type" : "resources",
+         "uuid" : "899bf850-ffc9-467f-afb1-f72543c98fe7",
+         "version" : [ 1, 0, 0 ]
+      }
+   ],
+   "subpacks": [
+{
+"folder_name": "Blue",
+"name": "蓝",
+"memory_tier": 1
+},
+
+{
+"folder_name": "modern",
+"name": "敬请期待",
+"memory_tier": 1
+      }
+
+   ]
+   }

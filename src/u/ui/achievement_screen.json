@@ -1,0 +1,13 @@
+/*File modified by 孙悟空.
+//(c) Don't use any code design without permission!*/
+{
+  "achievement_screen": {
+    "$screen_content": "achievement_dx.center_screen",
+    "$screen_bg_content": "achievement_dx.full_screen",
+    "$header_safezone_control": "common_dx.null_panel",
+    "$header_bar_control": "common_dx.null_panel",
+    "$is_full_screen_layout": false,
+    "$screen_animations": [ ],
+    "$background_animations": [ ]
+  }
+}

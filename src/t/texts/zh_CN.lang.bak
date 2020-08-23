@@ -1,0 +1,114 @@
+﻿##  Video Settings
+options.graphics.fancy.tooltip=花俏的  - 高画质，较慢  改变云，树叶，水，阴影与草地侧面的外观。
+options.graphics.fast.tooltip=流畅  - 低画质，较流畅  改变云，树叶，水，阴影与草地侧面的外观。
+
+options.vsync=使用垂直同步 
+options.vsync.off=关闭 
+options.vsync.on=开启 
+options.vsync.adaptive=自适应同步 
+
+options.renderClouds=云 
+
+options.maxFramerate=最大帧率
+
+options.fov.toggle=动态视场
+
+options.thirdperson=视角 
+options.thirdperson.firstperson=第一人称 
+options.thirdperson.thirdpersonback=第三人称背面 
+options.thirdperson.thirdpersonfront=第三人称正面 
+
+##  Recipe Book
+gui.recipebook.search_hint=§o搜寻...
+gui.recipebook.toggleRecipes.all=已列出所有项目
+gui.recipebook.toggleRecipes.craftable=仅显示可合成
+gui.recipebook.toggleRecipes.smeltable=仅显示可熔炼
+gui.recipebook.toggleRecipes.blastable=仅显示可冶炼
+gui.recipebook.toggleRecipes.smokable=仅显示可熏制
+
+## Creative
+inventory.binSlot=摧毁物品
+
+##  Resource Packs
+resourcePack.available.title=§l可用的资源包
+resourcePack.available.title.behaviorPacks=§l可用的行为包
+resourcePack.selected.title=§l已选的资源包
+resourcePack.selected.title.behaviorPacks=§l已选的行为包
+
+##  Worlds
+merchant.deprecated=村民每天最多补货两次。#
+selectWorld.tooltip.beta=使用测试版本载入之前，别忘了先备份这个世界。
+
+##  Realms
+realms.what_is.desc=领域是一种安全，简单的方式，一次最多可与10个朋友一起享受Minecraft的在线世界。它支持迷你游戏和大量自定义世界！只有领域的所有者需要付款。#
+
+##  Toggle OFF/ON
+options.off=关闭
+options.on=开启
+
+## Profile Screen
+profile.user= 用户
+profile.connected= 已连接
+
+## Gamerule
+selectWorld.gameRules=游戏规则
+  
+editGamerule.title=编辑游戏规则
+editGamerule.default=默认:
+
+gamerule.announceAdvancements=进度通知
+gamerule.commandBlockOutput=公布指令方块输出
+gamerule.disableElytraMovementCheck=禁用鞘翅移动检测
+gamerule.disableRaids=禁用袭击
+gamerule.doDaylightCycle=游戏内时间流逝
+gamerule.doEntityDrops=非生物实体掉落
+gamerule.doEntityDrops.description=控制矿车（包括内容物）、物品展示框、船等的物品掉落
+gamerule.doFireTick=火焰蔓延
+gamerule.doImmediateRespawn=立即重生
+gamerule.doInsomnia=生成幻翼
+gamerule.doLimitedCrafting=合成需要配方
+gamerule.doLimitedCrafting.description=若启用，玩家只能使用已解锁的配方合成
+gamerule.doMobLoot=生物战利品掉落
+gamerule.doMobLoot.description=控制生物死亡后是否掉落资源，包括经验球
+gamerule.doMobSpawning=生成生物
+gamerule.doMobSpawning.description=部分实体可能採用不同的规则
+gamerule.doPatrolSpawning=生成掠夺者巡逻队
+gamerule.doTileDrops=掉落方块
+gamerule.doTileDrops.description=控制资源掉落， 包含经验球
+gamerule.doTraderSpawning=生成流浪商人
+gamerule.doWeatherCycle=更新天气
+gamerule.drowningDamage=溺水伤害
+gamerule.fallDamage=摔落伤害
+gamerule.fireDamage=火焰伤害
+gamerule.keepInventory=死亡后保留物品栏
+gamerule.logAdminCommands=通告管理员命令
+gamerule.maxCommandChainLength=命令连锁执行数量限制
+gamerule.maxCommandChainLength.description=应用于命令方块链和函数
+gamerule.maxEntityCramming=实体挤压上限
+gamerule.mobGriefing=允许破坏性生物行为
+gamerule.naturalRegeneration=生命值自然恢复
+gamerule.randomTickSpeed=随机刻速率
+gamerule.reducedDebugInfo=简化调试信息
+gamerule.reducedDebugInfo.description=限制调试屏幕内容
+gamerule.sendCommandFeedback=发送命令反馈
+gamerule.showDeathMessages=显示死亡信息
+gamerule.spawnRadius=重生点半径
+gamerule.spectatorsGenerateChunks=允许旁观者生成地形
+
+gamerule.category.chat=§l聊天
+gamerule.category.spawning=§l生成
+gamerule.category.updates=§l世界更新
+gamerule.category.drops=§l掉落
+gamerule.category.mobs=§l生物
+gamerule.category.player=§l玩家
+gamerule.category.misc=§l杂项
+
+##  Raid Texts Input
+raid.name=Raid	#
+raid.progress=Mobs remaining:	#
+
+##  Raid Texts Output
+bar.event.raid.name=劫掠	#
+bar.event.raid.remaining.2=劫掠 - 剩余生物： 2	#
+bar.event.raid.remaining.1=劫掠 - 剩余生物： 1	#
+bar.event.raid.remaining.0=劫掠 - 剩余生物： 0	#

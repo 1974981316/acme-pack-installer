@@ -1,0 +1,25 @@
+//This JSON was modified by AgentMindStorm (@agentms_). Please do not use this document without permission.
+{
+  "addons_selector_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "music_plus_button@music_plus_section.music_plus_button": {
+              "ignored": "(not $include_controls_and_settings_sections)",
+              "$toggle_group_forced_index": 52
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "addons_selector_panel/level_texture_pack_button": {
+    "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))"
+  },
+  "addons_selector_panel/addon_button": {
+    "ignored": "(not $include_world_section and (not $include_realm_section or not $realms_pack_feature_enabled))"
+  }
+}

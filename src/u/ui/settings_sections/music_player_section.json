@@ -1,0 +1,1235 @@
+//本Json文件由孙悟空编写，未经允许禁止二次修改！！！
+{
+  "namespace": "music_player_section",
+  "custom_section_toggle@settings_common.option_toggle_control": {
+    "$toggle_name": "custom_section",
+    "$toggle_state_binding_name": "#custom_section"
+  },
+  "information_section_toggle@settings_common.option_toggle_control": {
+    "$toggle_name": "information_section",
+    "$toggle_state_binding_name": "#information_section"
+  },
+  "music_player_button@settings_common.section_toggle_base": { 
+    "$toggle_view_binding_name": "music_player_button_toggle",
+    "$glyph_texture": "textures/ui/music_plus_pack_icon_outline",
+    "$glyph_color_texture": "textures/ui/music_player_icon_color",
+    "$glyph_size": [ 17, 17 ],
+    "$button_text": "tab.music_player.name",
+    "$toggle_property_bag": {
+      "#panel_title": "tab.music_player.title"
+    }
+  },
+  "music_player_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$always_show_information_section": false,
+    "$always_show_custom_section": false,
+    "$is_music_plus": true,
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "music_player_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [ 0, 5 ]
+        }
+      },
+      {
+        "information_section_toggle@settings_common.option_toggle": {
+          "ignored": "$always_show_information_section",
+          "$option_label": "tab.music_player.show_information_section",
+          "$control_name": "music_player_section.information_section_toggle"
+        }
+      },
+      {
+        "information_section": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            { "small_padding@how_to_play_common.small_padding": {
+                "ignored": "$always_show_information_section"
+              }
+            },
+            {
+              "music_player_information@music_player_section.music_player_information_section": {}
+            },
+            { "small_padding@how_to_play_common.small_padding": {
+                "ignored": "(not $always_show_custom_section)"
+              }
+            },
+            { "padding@how_to_play_common.padding": {
+                "ignored": "$always_show_custom_section"
+              }
+            }
+          ],
+          "bindings": "$information_section_bindings",
+          "$information_section_bindings|default": [
+            {
+              "binding_type": "view",
+              "source_control_name": "music_player_section.information_section_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "variables": [
+            {
+              "requires": "$always_show_information_section",
+              "$information_section_bindings": []
+            }
+          ]
+        }
+      },
+      {
+        "custom_section_toggle@settings_common.option_toggle": {
+          "ignored": "$always_show_custom_section",
+          "$option_label": "tab.music_player.show_custom_section",
+          "$control_name": "music_player_section.custom_section_toggle"
+        }
+      },
+      {
+        "custom_section@music_player_section.music_player_custom_section": {
+          "bindings": "$custom_section_bindings",
+          "$custom_section_bindings|default": [
+            {
+              "binding_type": "view",
+              "source_control_name": "music_player_section.custom_section_toggle",
+              "source_property_name": "#toggle_state",
+              "target_property_name": "#visible"
+            }
+          ],
+          "variables": [
+            {
+              "requires": "$always_show_custom_section",
+              "$custom_section_bindings": []
+            }
+          ]
+        }
+      },
+      {
+        "album_section@music_player_section.music_player_album_section": {}
+      },
+      {
+        "volume_alpha_section@music_player_section.music_player_volume_alpha_section": {}
+      },
+      {
+        "volume_beta_section@music_player_section.music_player_volume_beta_section": {}
+      },
+      {
+        "update_aquatic_section@music_player_section.music_player_update_aquatic_section": {
+          "ignored": "(not $is_music_plus and not $pre_release)"
+        }
+      },
+      {
+        "nether_update_section@music_player_section.music_player_nether_update_section": {
+          "ignored": "(not $is_music_plus and not $pre_release)"
+        }
+      },
+      {
+        "festive_remixes_section@music_player_section.music_player_festive_remixes_section": {
+          "ignored": "(not $is_music_plus)"
+        }
+      },
+      {
+        "other_section@music_player_section.music_player_other_section": {}
+      }
+    ]
+  },
+  "music_player_information_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "information@how_to_play_common.paragraph": {
+          "$text": "tab.music_player.information"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "stop_song@how_to_play_common.paragraph": {
+          "$text": "tab.music_player.information.stop_song"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_music@how_to_play_common.paragraph": {
+          "$text": "tab.music_player.information.custom_music"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "multiple_songs@how_to_play_common.paragraph": {
+          "$text|default": "tab.music_player.information.no_automatic_music",
+          "variables": [
+            {
+              "requires": "(not $is_music_plus)",
+              "$text": "tab.music_player.information.mute_music"
+            }
+          ]
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "marketplace@how_to_play_common.paragraph": {
+          "$text": "tab.music_player.information.marketplace"
+        }
+      }
+    ]
+  },
+  "music_player_custom_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "$is_custom_song": true,
+    "controls": [
+      {
+        "custom_title@how_to_play_common.header": {
+          "$text": "tab.music_player.custom.section"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "custom_album@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.album.custom",
+          "$song_sound_event": "album.custom.ui",
+          "$quaver_location": [ 60, 0 ],
+          "$type_image_panel_controls": [
+            {
+              "shuffle@music_player_section.shuffle_image": {}
+            }
+          ]
+        }
+      },
+      {
+        "custom1@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom1",
+          "$song_sound_event": "song.custom1.ui",
+          "$quaver_location": [ 0, 0 ]
+        }
+      },
+      {
+        "custom2@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom2",
+          "$song_sound_event": "song.custom2.ui",
+          "$quaver_location": [ 5, 0 ]
+        }
+      },
+      {
+        "custom3@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom3",
+          "$song_sound_event": "song.custom3.ui",
+          "$quaver_location": [ 10, 0 ]
+        }
+      },
+      {
+        "custom4@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom4",
+          "$song_sound_event": "song.custom4.ui",
+          "$quaver_location": [ 15, 0 ]
+        }
+      },
+      {
+        "custom5@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom5",
+          "$song_sound_event": "song.custom5.ui",
+          "$quaver_location": [ 20, 0 ]
+        }
+      },
+      {
+        "custom6@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom6",
+          "$song_sound_event": "song.custom6.ui",
+          "$quaver_location": [ 25, 0 ]
+        }
+      },
+      {
+        "custom7@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom7",
+          "$song_sound_event": "song.custom7.ui",
+          "$quaver_location": [ 30, 0 ]
+        }
+      },
+      {
+        "custom8@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom8",
+          "$song_sound_event": "song.custom8.ui",
+          "$quaver_location": [ 35, 0 ]
+        }
+      },
+      {
+        "custom9@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom9",
+          "$song_sound_event": "song.custom9.ui",
+          "$quaver_location": [ 40, 0 ]
+        }
+      },
+      {
+        "custom10@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom10",
+          "$song_sound_event": "song.custom10.ui",
+          "$quaver_location": [ 45, 0 ]
+        }
+      },
+      {
+        "custom11@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom11",
+          "$song_sound_event": "song.custom11.ui",
+          "$quaver_location": [ 50, 0 ]
+        }
+      },
+      {
+        "custom12@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom12",
+          "$song_sound_event": "song.custom12.ui",
+          "$quaver_location": [ 55, 0 ]
+        }
+      },
+      {
+        "custom13@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom13",
+          "$song_sound_event": "song.custom13.ui",
+          "$quaver_location": [ 0, 8 ]
+        }
+      },
+      {
+        "custom14@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom14",
+          "$song_sound_event": "song.custom14.ui",
+          "$quaver_location": [ 5, 8 ]
+        }
+      },
+      {
+        "custom15@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom15",
+          "$song_sound_event": "song.custom15.ui",
+          "$quaver_location": [ 10, 8 ]
+        }
+      },
+      {
+        "custom16@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom16",
+          "$song_sound_event": "song.custom16.ui",
+          "$quaver_location": [ 15, 8 ]
+        }
+      },
+      {
+        "custom17@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom17",
+          "$song_sound_event": "song.custom17.ui",
+          "$quaver_location": [ 20, 8 ]
+        }
+      },
+      {
+        "custom18@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom18",
+          "$song_sound_event": "song.custom18.ui",
+          "$quaver_location": [ 25, 8 ]
+        }
+      },
+      {
+        "custom19@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom19",
+          "$song_sound_event": "song.custom19.ui",
+          "$quaver_location": [ 30, 8 ]
+        }
+      },
+      {
+        "custom20@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom20",
+          "$song_sound_event": "song.custom20.ui",
+          "$quaver_location": [ 35, 8 ]
+        }
+      },
+      {
+        "custom21@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom21",
+          "$song_sound_event": "song.custom21.ui",
+          "$quaver_location": [ 40, 8 ]
+        }
+      },
+      {
+        "custom22@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom22",
+          "$song_sound_event": "song.custom22.ui",
+          "$quaver_location": [ 45, 8 ]
+        }
+      },
+      {
+        "custom23@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom23",
+          "$song_sound_event": "song.custom23.ui",
+          "$quaver_location": [ 50, 8 ]
+        }
+      },
+      {
+        "custom24@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom24",
+          "$song_sound_event": "song.custom24.ui",
+          "$quaver_location": [ 55, 8 ]
+        }
+      },
+      {
+        "custom25@music_player_section.music_player_button_custom_base": {
+          "$song_name": "tab.music_player.song.custom25",
+          "$song_sound_event": "song.custom25.ui",
+          "$quaver_location": [ 60, 8 ]
+        }
+      }
+    ]
+  },
+  "music_player_album_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "album_title@how_to_play_common.header": {
+          "$text": "tab.music_player.album.section"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "volume_alpha@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.album.volume_alpha",
+          "$song_sound_event|default": "album.alpha.ui",
+          "$type_image_panel_controls": [
+            {
+              "shuffle@music_player_section.shuffle_image": {}
+            }
+          ],
+          "variables": [
+            {
+              "requires": "(not $is_music_plus)",
+              "$song_sound_event": "album.alpha_native.ui"
+            }
+          ]
+        }
+      },
+      {
+        "volume_beta@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.album.volume_beta",
+          "$song_sound_event|default": "album.beta.ui",
+          "$type_image_panel_controls": [
+            {
+              "shuffle@music_player_section.shuffle_image": {}
+            }
+          ],
+          "variables": [
+            {
+              "requires": "(not $is_music_plus)",
+              "$song_sound_event": "album.beta_native.ui"
+            }
+          ]
+        }
+      },
+      {
+        "update_aquatic@music_player_section.music_player_button_update_aquatic_base": {
+          "ignored": "(not $is_music_plus and not $pre_release)",
+          "$song_name": "tab.music_player.album.update_aquatic",
+          "$song_sound_event": "album.update_aquatic.ui",
+          "$type_image_panel_controls": [
+            {
+              "shuffle@music_player_section.shuffle_image": {}
+            }
+          ]
+        }
+      },
+      {
+        "nether_update@music_player_section.music_player_button_nether_update_base": {
+          "ignored": "(not $is_music_plus and not $pre_release)",
+          "$song_name": "tab.music_player.album.nether_update",
+          "$song_sound_event": "album.nether_update.ui",
+          "$type_image_panel_controls": [
+            {
+              "shuffle@music_player_section.shuffle_image": {}
+            }
+          ]
+        }
+      },
+      {
+        "music_discs@music_player_section.music_player_button_panel_base": {
+          "$song_name": "tab.music_player.album.music_discs",
+          "$song_sound_event|default": "album.music_discs.ui",
+          "$artist_name|default": "tab.music_player.artist.c418_&_lena_raine",
+          "$album_image_panel_controls": [
+            {
+             "music_discs@music_player_section.music_discs_cover": {}
+           }
+         ],
+          "$type_image_panel_controls": [
+            {
+              "shuffle@music_player_section.shuffle_image": {}
+            }
+          ],
+          "variables": [
+            {
+              "requires": "(not $is_music_plus and not $pre_release)",
+              "$song_sound_event": "album.music_discs_native.ui",
+              "$artist_name": "tab.music_player.artist.c418"
+            },
+            {
+              "requires": "(not $is_music_plus and $pre_release)",
+              "$song_sound_event": "album.music_discs_native_beta.ui"
+            }
+          ]
+        }
+      },
+      {
+        "festive@music_player_section.music_player_button_festive_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.album.festive",
+          "$song_sound_event": "album.festive.ui",
+          "$type_image_panel_controls": [
+            {
+              "shuffle@music_player_section.shuffle_image": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "music_player_volume_alpha_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "volume_alpha_title@how_to_play_common.header": {
+          "$text": "tab.music_player.volume_alpha.section"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "key@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.key",
+          "$song_sound_event": "song.key.ui"
+        }
+      },
+      {
+        "door@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.door",
+          "$song_sound_event": "song.door.ui"
+        }
+      },
+      {
+        "subwoofer_lullaby@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.subwoofer_lullaby",
+          "$song_sound_event": "song.subwoofer_lullaby.ui"
+        }
+      },
+      {
+        "death@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.death",
+          "$song_sound_event": "song.death.ui"
+        }
+      },
+      {
+        "living_mice@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.living_mice",
+          "$song_sound_event": "song.living_mice.ui"
+        }
+      },
+      {
+        "moog_city@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.moog_city",
+          "$song_sound_event": "song.moog_city.ui"
+        }
+      },
+      {
+        "haggstrom@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.haggstrom",
+          "$song_sound_event": "song.haggstrom.ui"
+        }
+      },
+      {
+        "minecraft@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.minecraft",
+          "$song_sound_event": "song.minecraft.ui"
+        }
+      },
+      {
+        "oxygene@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.oxygene",
+          "$song_sound_event": "song.oxygene.ui"
+        }
+      },
+      {
+        "equinoxe@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.equinoxe",
+          "$song_sound_event": "song.equinoxe.ui"
+        }
+      },
+      {
+        "mice_on_venus@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.mice_on_venus",
+          "$song_sound_event": "song.mice_on_venus.ui"
+        }
+      },
+      {
+        "dry_hands@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.dry_hands",
+          "$song_sound_event": "song.dry_hands.ui"
+        }
+      },
+      {
+        "wet_hands@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.wet_hands",
+          "$song_sound_event": "song.wet_hands.ui"
+        }
+      },
+      {
+        "clark@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.clark",
+          "$song_sound_event": "song.clark.ui"
+        }
+      },
+      {
+        "chris@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.chris",
+          "$song_sound_event": "song.chris.ui"
+        }
+      },
+      {
+        "thirteen@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.thirteen",
+          "$song_sound_event": "song.thirteen.ui"
+        }
+      },
+      {
+        "excuse@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.excuse",
+          "$song_sound_event": "song.excuse.ui"
+        }
+      },
+      {
+        "sweden@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.sweden",
+          "$song_sound_event": "song.sweden.ui"
+        }
+      },
+      {
+        "cat@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.cat",
+          "$song_sound_event": "song.cat.ui"
+        }
+      },
+      {
+        "dog@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.dog",
+          "$song_sound_event": "song.dog.ui"
+        }
+      },
+      {
+        "danny@music_player_section.music_player_button_volume_alpha_base": {
+          "$song_name": "tab.music_player.song.danny",
+          "$song_sound_event": "song.danny.ui"
+        }
+      },
+      {
+        "beginning@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.beginning",
+          "$song_sound_event": "song.beginning.ui"
+        }
+      },
+      {
+        "droopy_likes_ricochet@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.droopy_likes_ricochet",
+          "$song_sound_event": "song.droopy_likes_ricochet.ui"
+        }
+      },
+      {
+        "droopy_likes_your_face@music_player_section.music_player_button_volume_alpha_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.droopy_likes_your_face",
+          "$song_sound_event": "song.droopy_likes_your_face.ui"
+        }
+      }
+    ]
+  },
+  "music_player_volume_beta_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "volume_beta_title@how_to_play_common.header": {
+          "$text": "tab.music_player.volume_beta.section"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "ki@music_player_section.music_player_button_volume_beta_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.ki",
+          "$song_sound_event": "song.ki.ui"
+        }
+      },
+      {
+        "alpha@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.alpha",
+          "$song_sound_event": "song.alpha.ui"
+        }
+      },
+      {
+        "dead_voxel@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.dead_voxel",
+          "$song_sound_event": "song.dead_voxel.ui"
+        }
+      },
+      {
+        "blind_spots@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.blind_spots",
+          "$song_sound_event": "song.blind_spots.ui"
+        }
+      },
+      {
+        "flake@music_player_section.music_player_button_volume_beta_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.flake",
+          "$song_sound_event": "song.flake.ui"
+        }
+      },
+      {
+        "moog_city_2@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.moog_city_2",
+          "$song_sound_event": "song.moog_city_2.ui"
+        }
+      },
+      {
+        "concrete_halls@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.concrete_halls",
+          "$song_sound_event": "song.concrete_halls.ui"
+        }
+      },
+      {
+        "biome_fest@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.biome_fest",
+          "$song_sound_event": "song.biome_fest.ui"
+        }
+      },
+      {
+        "mutation@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.mutation",
+          "$song_sound_event": "song.mutation.ui"
+        }
+      },
+      {
+        "haunt_muskie@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.haunt_muskie",
+          "$song_sound_event": "song.haunt_muskie.ui"
+        }
+      },
+      {
+        "warmth@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.warmth",
+          "$song_sound_event": "song.warmth.ui"
+        }
+      },
+      {
+        "floating_trees@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.floating_trees",
+          "$song_sound_event": "song.floating_trees.ui"
+        }
+      },
+      {
+        "aria_math@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.aria_math",
+          "$song_sound_event": "song.aria_math.ui"
+        }
+      },
+      {
+        "kyoto@music_player_section.music_player_button_volume_beta_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.kyoto",
+          "$song_sound_event": "song.kyoto.ui"
+        }
+      },
+      {
+        "ballad_of_the_cats@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.ballad_of_the_cats",
+          "$song_sound_event": "song.ballad_of_the_cats.ui"
+        }
+      },
+      {
+        "taswell@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.taswell",
+          "$song_sound_event": "song.taswell.ui"
+        }
+      },
+      {
+        "beginning_2@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.beginning_2",
+          "$song_sound_event": "song.beginning_2.ui"
+        }
+      },
+      {
+        "dreiton@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.dreiton",
+          "$song_sound_event": "song.dreiton.ui"
+        }
+      },
+      {
+        "the_end@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.the_end",
+          "$song_sound_event": "song.the_end.ui"
+        }
+      },
+      {
+        "chirp@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.chirp",
+          "$song_sound_event": "song.chirp.ui"
+        }
+      },
+      {
+        "wait@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.wait",
+          "$song_sound_event": "song.wait.ui"
+        }
+      },
+      {
+        "mellohi@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.mellohi",
+          "$song_sound_event": "song.mellohi.ui"
+        }
+      },
+      {
+        "stal@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.stal",
+          "$song_sound_event": "song.stal.ui"
+        }
+      },
+      {
+        "strad@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.strad",
+          "$song_sound_event": "song.strad.ui"
+        }
+      },
+      {
+        "eleven@music_player_section.music_player_button_volume_beta_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.eleven",
+          "$song_sound_event": "song.eleven.ui"
+        }
+      },
+      {
+        "broken_eleven@music_player_section.music_player_button_volume_beta_base": {
+          "ignored": "$is_music_plus",
+          "$song_name": "tab.music_player.song.broken_eleven",
+          "$song_sound_event": "song.eleven.ui"
+        }
+      },
+      {
+        "ward@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.ward",
+          "$song_sound_event": "song.ward.ui"
+        }
+      },
+      {
+        "mall@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.mall",
+          "$song_sound_event": "song.mall.ui"
+        }
+      },
+      {
+        "blocks@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.blocks",
+          "$song_sound_event": "song.blocks.ui"
+        }
+      },
+      {
+        "far@music_player_section.music_player_button_volume_beta_base": {
+          "$song_name": "tab.music_player.song.far",
+          "$song_sound_event": "song.far.ui"
+        }
+      },
+      {
+        "intro@music_player_section.music_player_button_volume_beta_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.intro",
+          "$song_sound_event": "song.intro.ui"
+        }
+      }
+    ]
+  },
+  "music_player_update_aquatic_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "update_aquatic_title@how_to_play_common.header": {
+          "$text": "tab.music_player.update_aquatic.section"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "axolotl@music_player_section.music_player_button_update_aquatic_base": {
+          "$song_name": "tab.music_player.song.axolotl",
+          "$song_sound_event": "song.axolotl.ui"
+        }
+      },
+      {
+        "dragon_fish@music_player_section.music_player_button_update_aquatic_base": {
+          "$song_name": "tab.music_player.song.dragon_fish",
+          "$song_sound_event": "song.dragon_fish.ui"
+        }
+      },
+      {
+        "shuniji@music_player_section.music_player_button_update_aquatic_base": {
+          "$song_name": "tab.music_player.song.shuniji",
+          "$song_sound_event": "song.shuniji.ui"
+        }
+      }
+    ]
+  },
+  "music_player_nether_update_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "nether_update_title@how_to_play_common.header": {
+          "$text": "tab.music_player.nether_update.section"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "chrysopoeia@music_player_section.music_player_button_nether_update_base": {
+          "$song_name": "tab.music_player.song.chrysopoeia",
+          "$song_sound_event": "song.chrysopoeia.ui"
+        }
+      },
+      {
+        "rubedo@music_player_section.music_player_button_nether_update_base": {
+          "$song_name": "tab.music_player.song.rubedo",
+          "$song_sound_event": "song.rubedo.ui"
+        }
+      },
+      {
+        "so_below@music_player_section.music_player_button_nether_update_base": {
+          "$song_name": "tab.music_player.song.so_below",
+          "$song_sound_event": "song.so_below.ui"
+        }
+      },
+      {
+        "pigstep@music_player_section.music_player_button_nether_update_base": {
+          "$song_name": "tab.music_player.song.pigstep",
+          "$song_sound_event": "song.pigstep.ui"
+        }
+      }
+    ]
+  },
+  "music_player_festive_remixes_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "festive_remixes_title@how_to_play_common.header": {
+          "$text": "tab.music_player.festive_remixes.section"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "ballad_of_the_cats_festive@music_player_section.music_player_button_festive_base": {
+          "$song_name": "tab.music_player.song.ballad_of_the_cats.festive",
+          "$song_sound_event": "song.ballad_of_the_cats.festive.ui"
+        }
+      },
+      {
+        "warmth_festive@music_player_section.music_player_button_festive_base": {
+          "$song_name": "tab.music_player.song.warmth.festive",
+          "$song_sound_event": "song.warmth.festive.ui"
+        }
+      },
+      {
+        "the_end_festive@music_player_section.music_player_button_festive_base": {
+          "$song_name": "tab.music_player.song.the_end.festive",
+          "$song_sound_event": "song.the_end.festive.ui"
+        }
+      }
+    ]
+  },
+  "music_player_other_section": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "other_title@how_to_play_common.header": {
+          "$text": "tab.music_player.other.section"
+        }
+      },
+      { "small_padding@how_to_play_common.small_padding": {
+        }
+      },
+      {
+        "the_ender_dragon@music_player_section.music_player_button_other_base": {
+          "$song_name": "tab.music_player.song.the_ender_dragon",
+          "$artist_name": "tab.music_player.artist.c418",
+          "$song_sound_event": "song.the_ender_dragon.ui"
+        }
+      },
+      {
+        "magnetic_circuit@music_player_section.music_player_button_other_base": {
+          "ignored": "(not $is_music_plus)",
+          "$song_name": "tab.music_player.song.magnetic_circuit",
+          "$artist_name": "tab.music_player.artist.markus_persson",
+          "$song_sound_event": "song.magnetic_circuit.ui"
+        }
+      }
+    ]
+  },
+  "music_player_button_panel_base": {
+    "type": "panel",
+    "size": [ "100%", 30 ],
+    "$is_custom_song|default": false,
+    "controls": [
+      {
+        "album_image_panel": {
+          "type": "panel",
+          "offset": [ "-50% + 16px", 0 ],
+          "layer": 50,
+          "controls": "$album_image_panel_controls"
+        }
+      },
+      {
+        "type_image_panel": {
+          "type": "panel",
+          "offset": [ "50% - 16px", 0 ],
+          "layer": 50,
+          "controls": "$type_image_panel_controls",
+          "$type_image_panel_controls|default": [
+            {
+              "speaker@music_player_section.speaker_image": {}
+            }
+          ]
+        }
+      },
+      {
+        "player@settings_common.action_button": {
+          "$border_visible": false,
+          "$button_text": " ",
+          "$default_button_texture|default": "textures/ui/empty",
+          "$hover_button_texture|default": "textures/ui/focus_border_white",
+          "$pressed_button_texture|default": "textures/ui/focus_border_green",
+          "$locked_button_texture|default": "textures/ui/empty",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "sound_name": "$song_sound_event",
+          "sound_pitch": 1,
+          "sound_volume": 1,
+          "layer": 6
+        }
+      },
+      {
+        "song_name": {
+          "type": "label",
+          "text": "$song_name",
+          "size": [ "default", 10 ],
+          "max_size": [ "100%", "100%" ],
+          "offset": "$song_name_offset",
+          "layer": 50,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "$song_name_offset|default": [ 0, -5 ],
+          "variables": [
+            {
+              "requires": "$is_custom_song",
+              "$song_name_offset": [ 0, 0 ]
+            }
+          ]
+        }
+      },
+      {
+        "artist_name": {
+          "type": "label",
+          "text": "$artist_name",
+          "size": [ "default", 10 ],
+          "max_size": [ "100%", "100%" ],
+          "offset": [ 0, 5 ],
+          "layer": 50,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "ignored": "$is_custom_song"
+        }
+      }
+    ]
+  },
+  "music_player_button_custom_base@music_player_button_panel_base": {
+    "$album_image_panel_controls": [
+      {
+        "custom@music_player_section.custom_cover": {}
+      }
+    ]
+  },
+  "music_player_button_volume_alpha_base@music_player_button_panel_base": {
+    "$artist_name": "tab.music_player.artist.c418",
+    "$album_image_panel_controls": [
+      {
+        "alpha@music_player_section.volume_alpha_cover": {}
+      }
+    ]
+  },
+  "music_player_button_volume_beta_base@music_player_button_panel_base": {
+    "$artist_name": "tab.music_player.artist.c418",
+    "$album_image_panel_controls": [
+      {
+        "beta@music_player_section.volume_beta_cover": {}
+      }
+    ]
+  },
+  "music_player_button_update_aquatic_base@music_player_button_panel_base": {
+    "$artist_name": "tab.music_player.artist.c418",
+    "$album_image_panel_controls": [
+      {
+        "update_aquatic@music_player_section.update_aquatic_cover": {}
+      }
+    ]
+  },
+  "music_player_button_nether_update_base@music_player_button_panel_base": {
+    "$artist_name": "tab.music_player.artist.lena_raine",
+    "$album_image_panel_controls": [
+      {
+        "nether_update@music_player_section.nether_update_cover": {}
+      }
+    ]
+  },
+  "music_player_button_festive_base@music_player_button_panel_base": {
+    "$artist_name": "tab.music_player.artist.c418",
+    "$album_image_panel_controls": [
+      {
+        "festive@music_player_section.festive_cover": {}
+      }
+    ]
+  },
+  "music_player_button_other_base@music_player_button_panel_base": {
+    "$album_image_panel_controls": [
+      {
+        "other@music_player_section.other_cover": {}
+      }
+    ]
+  },
+  "cover_border": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "layer": 24,
+    "texture": "textures/ui/focus_border_white"
+  },
+  "cover_base": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "layer": 23,
+    "texture": "$album_cover_texture",
+    "$album_cover_texture|default": "textures/ui/cover_background_gray",
+    "controls": [
+      {
+        "border@music_player_section.cover_border": {}
+      }
+    ]
+  },
+  "custom_cover@music_player_section.cover_base": {
+    "controls": [
+      {
+        "border@music_player_section.cover_border": {}
+      },
+      {
+        "quaver": {
+          "type": "image",
+          "anchor_to": "center",
+          "anchor_from": "center",
+          "size": [ 8.3, 13.28 ],
+          "uv_size": [ 5, 8 ],
+          "uv": "$quaver_location",
+          "layer": 25,
+          "texture": "textures/ui/quaver"
+        }
+      }
+    ]
+  },
+  "volume_alpha_cover@music_player_section.cover_base": {
+    "$album_cover_texture": "textures/ui/cover_alpha"
+  },
+  "volume_beta_cover@music_player_section.cover_base": {
+    "$album_cover_texture": "textures/ui/cover_beta"
+  },
+  "update_aquatic_cover@music_player_section.cover_base": {
+    "$album_cover_texture": "textures/ui/cover_update_aquatic"
+  },
+  "nether_update_cover@music_player_section.cover_base": {
+    "$album_cover_texture": "textures/blocks/netherrack"
+  },
+  "music_discs_cover@music_player_section.cover_base": {
+    "$album_cover_texture": "textures/blocks/jukebox_side",
+    "controls": [
+      {
+        "border@music_player_section.cover_border": {}
+      },
+      {
+        "music_disc": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "layer": 25,
+          "texture": "textures/ui/music_disc"
+        }
+      }
+    ]
+  },
+  "festive_cover@music_player_section.cover_base": {
+    "$album_cover_texture": "textures/ui/cover_festive"
+  },
+  "other_cover@music_player_section.cover_base": {
+    "controls": [
+      {
+        "border@music_player_section.cover_border": {}
+      },
+      {
+        "question_mark": {
+          "type": "image",
+          "size": [ 18, 18 ],
+          "layer": 25,
+          "texture": "textures/ui/question_mark"
+        }
+      }
+    ]
+  },
+  "shuffle_image": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui/shuffle"
+  },
+  "speaker_image": {
+    "type": "image",
+    "size": [ 18, 18 ],
+    "texture": "textures/ui/speaker"
+  }
+}

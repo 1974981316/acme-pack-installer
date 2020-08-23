@@ -1,0 +1,10 @@
+{
+  "container_slot_button_prototype": {
+    "consume_hover_events": false
+  },
+
+  "slot_selected": {
+    "texture": "$slot_selected_texture",
+    "$slot_selected_texture|default": "textures/ui/pocket_ui_highlight_selected_slot"
+  }
+}
