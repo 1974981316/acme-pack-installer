@@ -2,6 +2,7 @@
 
 ACME Pack安装器使用教程
 注意，本操作不支持Linux容器和系统终端！！！请使用Termux/UTermux/NeoTerm操作
+
 安装
 
 ```
@@ -15,6 +16,26 @@ bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/ma
 apt install -y curl
 bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/master/u')"
 ```
+仓库里的install有很多功能，但是需要克隆此仓库，此脚本为测试阶段，有bug请反馈
+使用教程:
+
+克隆
+
+```
+git clone https://gitee.com/SunWuKong443/acme-pack-installer.git
+```
+然后执行cd acme-pack-installer
+使用教程:
+先执行这个指令:`sh ./install -wd`
+使用默认目录:`sh ./install -g`
+安装到其他目录: `sh ./install -d 路径`
+卸载: `sh ./install -u`
+显示版本: `sh ./install -version`
+帮助:`sh ./install -help`
+压缩为mcpack到游戏目录:`sh ./install -gma`
+压缩为zip到游戏目录:`sh ./install -gza`
+压缩为mcpack到自定义目录:`sh $0 -ma 路径`
+压缩为zip到自定义目录:`sh $0 -za 路径`
 材质包下载地址:
 [清玖云盘](https://cloud.qingstore.cn/#/s/ag8Xta)
 
