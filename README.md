@@ -16,7 +16,7 @@ apt install -y curl
 bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/master/u')"
 ```
 材质包下载地址:
-(https://cloud.qingstore.cn/#/s/ag8Xta)
+[清玖云盘](https://cloud.qingstore.cn/#/s/ag8Xta)
 
 #### 码云特技
 
