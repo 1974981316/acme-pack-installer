@@ -96,7 +96,6 @@ git clone https://gitee.com/SunWuKong443/acme-pack-installer.git
 exit
 fi
 if [ $1 == --help ]; then
-echo 先执行这个指令:sh $0 -wd
 echo 使用默认目录:sh $0 -g
 echo 安装到其他目录: sh $0 -d 路径
 echo 卸载: sh $0 -u
