@@ -25,10 +25,10 @@ bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/ma
 git clone https://gitee.com/SunWuKong443/acme-pack-installer.git
 ```
 然后执行cd acme-pack-installer
-使用教程:
-先执行这个指令:`sh ./install -wd`
 
-使用默认目录:`sh ./install -g`
+使用教程:
+
+安装到默认目录:`sh ./install -g`
 
 安装到其他目录: `sh ./install -d 路径`
 
