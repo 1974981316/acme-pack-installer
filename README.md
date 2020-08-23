@@ -15,12 +15,8 @@ bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/ma
 apt install -y curl
 bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/master/u')"
 ```
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
+材质包下载地址:
+(https://cloud.qingstore.cn/#/s/ag8Xta)
 
 #### 码云特技
 
