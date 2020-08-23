@@ -1,0 +1,3 @@
+echo 正在卸载
+rm -rf /sdcard/games/con.mojang/resource_packs/ACMEPack/
+echo 卸载完成！
