@@ -27,16 +27,27 @@ git clone https://gitee.com/SunWuKong443/acme-pack-installer.git
 然后执行cd acme-pack-installer
 使用教程:
 先执行这个指令:`sh ./install -wd`
+
 使用默认目录:`sh ./install -g`
+
 安装到其他目录: `sh ./install -d 路径`
+
 卸载: `sh ./install -u`
+
 显示版本: `sh ./install -version`
+
 帮助:`sh ./install -help`
+
 压缩为mcpack到游戏目录:`sh ./install -gma`
+
 压缩为zip到游戏目录:`sh ./install -gza`
-压缩为mcpack到自定义目录:`sh $0 -ma 路径`
-压缩为zip到自定义目录:`sh $0 -za 路径`
+
+压缩为mcpack到自定义目录:`sh ./install -ma 路径`
+
+压缩为zip到自定义目录:`sh ./install -za 路径`
+
 材质包下载地址:
+
 [清玖云盘](https://cloud.qingstore.cn/#/s/ag8Xta)
 
 #### 码云特技
