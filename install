@@ -1,0 +1,127 @@
+if [ $1 == -g ]; then
+packdir=/sdcard/games/com.mojang/resource_packs/ACMEPack/
+cd acme-pack-installer
+cp -r ./src/a/* $packdir
+cp -r ./src/d/* $packdir
+cp -r ./src/f/* $packdir
+cp -r ./src/l/* $packdir
+cp -r ./src/m/* $packdir
+cp -r ./src/p/* $packdir
+cp -r ./src/s/* $packdir
+cp -r ./src/t/* $packdir
+cp -r ./src/u/* $packdir
+exit
+fi
+if [ $1 == -u ]; then
+rm -rf $2/ACMEPack/
+rm -rf $2/ACMEPack.zip
+rm -rf $2/ACMEPack.mcpack
+rm -rf /sdcard/games/com.mojang/resource_packs/ACMEPack/
+rm -rf /sdcard/games/com.mojang/resource_packs/ACMEPack.mcpack
+rm -rf /sdcard/games/com.mojang/resource_packs/ACMEPack.zip
+exit
+fi
+if [ $1 == -za ]; then
+mkdir ./.tmp
+cp -r ./src/a/* ./.tmp
+cp -r ./src/d/* ./.tmp
+cp -r ./src/f/* ./.tmp
+cp -r ./src/l/* ./.tmp
+cp -r ./src/m/* ./.tmp
+cp -r ./src/p/* ./.tmp
+cp -r ./src/s/* ./.tmp
+cp -r ./src/t/* ./.tmp
+cp -r ./src/u/* ./.tmp
+cd .tmp
+zip -r $2/ACMEPack.zip ./
+cd ..
+rm -rf ./.tmp
+exit
+fi
+if [ $1 == -ma ]; then
+mkdir ./.tmp
+cp -r ./src/a/* ./.tmp
+cp -r ./src/d/* ./.tmp
+cp -r ./src/f/* ./.tmp
+cp -r ./src/l/* ./.tmp
+cp -r ./src/m/* ./.tmp
+cp -r ./src/p/* ./.tmp
+cp -r ./src/s/* ./.tmp
+cp -r ./src/t/* ./.tmp
+cp -r ./src/u/* ./.tmp
+cd .tmp
+zip -r $2/ACMEPack.mcpack ./
+cd ..
+rm -rf ./.tmp
+exit
+fi
+if [ $1 == -gma ]; then
+mkdir ./.tmp
+cp -r ./src/a/* ./.tmp
+cp -r ./src/d/* ./.tmp
+cp -r ./src/f/* ./.tmp
+cp -r ./src/l/* ./.tmp
+cp -r ./src/m/* ./.tmp
+cp -r ./src/p/* ./.tmp
+cp -r ./src/s/* ./.tmp
+cp -r ./src/t/* ./.tmp
+cp -r ./src/u/* ./.tmp
+cd .tmp
+zip -r /sdcard/games/com.mojang/resource_packs/ACMEPack.mcpack ./
+cd ..
+rm -rf ./.tmp
+exit
+fi
+if [ $1 == -gza ]; then
+mkdir ./.tmp
+cp -r ./src/a/* ./.tmp
+cp -r ./src/d/* ./.tmp
+cp -r ./src/f/* ./.tmp
+cp -r ./src/l/* ./.tmp
+cp -r ./src/m/* ./.tmp
+cp -r ./src/p/* ./.tmp
+cp -r ./src/s/* ./.tmp
+cp -r ./src/t/* ./.tmp
+cp -r ./src/u/* ./.tmp
+cd .tmp
+zip -r /sdcard/games/com.mojang/resource_packs/ACMEPack.zip ./
+cd ..
+rm -rf ./.tmp
+exit
+fi
+if [ $1 == -wd ]; then
+echo 正在下载资源
+apt install git zip
+git clone https://gitee.com/SunWuKong443/acme-pack-installer.git
+exit
+fi
+if [ $1 == --help ]; then
+echo 先执行这个指令:sh $0 -wd
+echo 使用默认目录:sh $0 -g
+echo 安装到其他目录: sh $0 -d 路径
+echo 卸载: sh $0 -u
+echo 显示版本: sh $0 -version
+echo 帮助:sh $0 --help
+echo 压缩为mcpack到游戏目录:sh $0 -gma
+echo 压缩为zip到游戏目录:sh $0 -gza
+echo 压缩为mcpack到自定义目录:sh $0 -ma 路径
+echo 压缩为zip到自定义目录:sh $0 -za 路径
+exit
+fi
+if [ $1 == --version ]; then
+echo "ACME Pack Installer 2020 R1"
+exit
+fi
+if [ $1 == -d ] ; then
+mkdir $2/ACMEPack
+cd acme-pack-installer
+cp -r ./src/a/* $2/ACMEPack
+cp -r ./src/d/* $2/ACMEPack
+cp -r ./src/f/* $2/ACMEPack
+cp -r ./src/l/* $2/ACMEPack
+cp -r ./src/m/* $2/ACMEPack
+cp -r ./src/p/* $2/ACMEPack
+cp -r ./src/s/* $2/ACMEPack
+cp -r ./src/t/* $2/ACMEPack
+cp -r ./src/u/* $2/ACMEPack
+fi
