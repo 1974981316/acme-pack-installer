@@ -9,14 +9,14 @@ ACME Pack安装器使用教程
 
 ```
 apt install -y curl
-bash -c "$(curl -LfsS 'https://github.com/1974981316/acme-pack-installer/raw/master/i')"
+bash -c "$(curl -fsSL 'https://github.com/1974981316/acme-pack-installer/raw/master/i')"
 ```
 
 卸载
 
 ```
 apt install -y curl
-bash -c "$(curl -LfsS 'https://github.com/1974981316/acme-pack-installer/raw/master/u')"
+bash -c "$(curl -fsSL 'https://github.com/1974981316/acme-pack-installer/raw/master/u')"
 ```
 
 国内用户:
@@ -25,14 +25,14 @@ bash -c "$(curl -LfsS 'https://github.com/1974981316/acme-pack-installer/raw/mas
 
 ```
 apt install -y curl
-bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/master/i')"
+bash -c "$(curl -fsSL 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/master/i')"
 ```
 
 卸载
 
 ```
 apt install -y curl
-bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/master/u')"
+bash -c "$(curl -fsSL 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/master/u')"
 ```
 
 仓库里的install有很多功能，但是需要克隆此仓库，此脚本为测试阶段，有bug请反馈
