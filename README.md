@@ -3,6 +3,24 @@
 ACME Pack安装器使用教程
 注意，本操作不支持Linux容器和系统终端！！！请使用Termux/UTermux/NeoTerm操作
 
+海外用户:
+
+安装
+
+```
+apt install -y curl
+bash -c "$(curl -LfsS 'https://github.com/1974981316/acme-pack-installer/raw/master/i')"
+```
+
+卸载
+
+```
+apt install -y curl
+bash -c "$(curl -LfsS 'https://github.com/1974981316/acme-pack-installer/raw/master/u')"
+```
+
+国内用户:
+
 安装
 
 ```
@@ -16,14 +34,24 @@ bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/ma
 apt install -y curl
 bash -c "$(curl -LfsS 'https://gitee.com/SunWuKong443/acme-pack-installer/raw/master/u')"
 ```
+
 仓库里的install有很多功能，但是需要克隆此仓库，此脚本为测试阶段，有bug请反馈
 使用教程:
 
 克隆
 
+海外用户:
+
+```
+git clone https://github.com/1974981316/acme-pack-installer.git
+```
+
+国内用户:
+
 ```
 git clone https://gitee.com/SunWuKong443/acme-pack-installer.git
 ```
+
 然后执行cd acme-pack-installer
 
 使用教程:
